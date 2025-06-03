@@ -1,0 +1,1474 @@
+key,description
+h,move the cursor left
+j,move the cursor down
+k,move the cursor up
+l,move the cursor right
+b,move to the start of a word
+B,move to the start of a token
+w,move to the start of the next word
+W,move to the start of the next token
+e,move to the end of a word
+E,move to the end of a token
+0,jump to the beginning of the line
+$,jump to the end of the line
+^,jump to the first (non-blank) character of the line
+#G / #gg / :#,move to a specified line number (replace # with the line number)
+Ctrl + b,move back one full screen
+Ctrl + f,move forward one full screen
+Ctrl + d,move forward 1/2 a screen
+Ctrl + u,move back 1/2 a screen
+Ctrl + e,move screen down one line (without moving the cursor)
+Ctrl + y,move screen up one line (without moving the cursor)
+Ctrl + o,move backward through the jump history
+Ctrl + i,move forward through the jump history
+H,move to the top of the screen (H=high)
+M,move to the middle of the screen (M=middle)
+L,move to the bottom of the screen (L=low)
+i,switch to insert mode before the cursor
+I,insert text at the beginning of the line
+a,switch to insert mode after the cursor
+A,insert text at the end of the line
+o,open a new line below the current one
+O,open a new line above the current one
+ea,insert text at the end of the word
+Esc,exit insert mode; switch to command mode
+r,replace a single character (and return to command mode)
+cc,replace an entire line (deletes the line and moves into insert mode)
+C / c$,replace from the cursor to the end of a line
+cw,replace from the cursor to the end of a word
+s,delete a character (and move into insert mode)
+J,merge the line below to the current one with a space in between them
+gJ,merge the line below to the current one with no space in between them
+u,undo
+Ctrl + r,redo
+.,repeat last command
+yy,copy (yank) entire line
+#yy,copy the specified number of lines
+dd,cut (delete) entire line
+#dd,cut the specified number of lines
+p,paste after the cursor
+P,paste before the cursor
+v,select text using character mode
+V,select lines using line mode
+Ctrl+v,select text using block mode
+o,move from one end of the selected text to the other
+aw,select a word
+ab,select a block with ()
+aB,select a block with {}
+at,select a block with <>
+ib,select inner block with ()
+iB,select inner block with {}
+it,select inner block with <>
+y,yank (copy) the marked text
+d,delete (cut) the marked text
+p,paste the text after the cursor
+u,change the market text to lowercase
+U,change the market text to uppercase
+*,jump to the next instance of the current word
+#,jump to previous instance of the current word
+/pattern,search forward for the specified pattern
+?pattern,search backward for the specified pattern
+n,repeat the search in the same direction
+N,repeat the search in the opposite direction
+m[a-z],mark text using character mode (from a to z)
+M[a-z],mark lines using line mode (from a to z)
+`a - jump to position marked a,
+`y`a,yank text to position marked >a>
+`.,jump to last change in file
+`0,jump to position where Vim was last exited
+``,jump to last jump
+:marks,list all marks
+:jumps,list all jumps
+:changes,list all changes
+Ctrl+i,move to next instance in jump list
+Ctrl+o,move to previous instance in jump list
+"g,",move to next instance in change list
+g;,move to previous instance in change list
+qa,record macro a
+q,stop recording macro
+@a,run macro a
+@@,run last macro again
+2h,move the cursor two characters left
+3h,move the cursor three characters left
+5h,move the cursor five characters left
+h$h,move the cursor left to the beginning of the line
+h0h,move the cursor left to the first character of the line
+h^h,move the cursor left to the first non-blank character of the line
+hfx,move the cursor left to the previous occurrence of character 'x' on the current line
+hF x,move the cursor left to the previous occurrence of character 'x' on the current line
+h3t x,move the cursor left to just before the third previous occurrence of character 'x' on the current line
+h3T x,move the cursor left to just after the third previous occurrence of character 'x' on the current line
+h3w,move the cursor left to the beginning of the third previous word
+h3b,"move the cursor left to the beginning of the third previous word, including punctuation"
+h3e,move the cursor left to the end of the third previous word
+h3B,"move the cursor left to the beginning of the third previous WORD, including punctuation"
+h3E,move the cursor left to the end of the third previous WORD
+h3),move the cursor left to the beginning of the third previous sentence
+h3(,move the cursor left to the beginning of the third previous sentence
+h3{,move the cursor left to the beginning of the third previous paragraph
+h3gg,move the cursor left to the beginning of the third previous line
+h3G,move the cursor left to the beginning of the third previous line
+h3H,move the cursor left to the beginning of the third previous line
+h3M,move the cursor left to the beginning of the third previous line
+h3L,move the cursor left to the beginning of the third previous line
+2j,move the cursor down two lines
+3j,move the cursor down three lines
+5j,move the cursor down five lines
+10j,move the cursor down ten lines
+2k,move the cursor up two lines
+3k,move the cursor up three lines
+5k,move the cursor up five lines
+10k,move the cursor up ten lines
+gg,move the cursor to the beginning of the document
+G,move the cursor to the end of the document
+H,move the cursor to the top of the screen
+M,move the cursor to the middle of the screen
+L,move the cursor to the bottom of the screen
+w,move the cursor to the beginning of the next word
+e,move the cursor to the end of the current word
+b,move the cursor to the beginning of the previous word
+f<char>,move the cursor forward to the next occurrence of <char> on the current line
+t<char>,move the cursor forward to just before the next occurrence of <char> on the current line
+d3j,delete the next three lines
+y2j,yank (copy) the next two lines
+c5j,change (delete and start insert) the next five lines
+k2j,move the cursor up two lines
+k3w,move the cursor up three words
+k$,move the cursor up to the end of the line
+k0,move the cursor up to the beginning of the line
+k^,move the cursor up to the first non-blank character of the line
+kG,move the cursor up to the beginning of the file
+kgg,move the cursor up to the beginning of the file
+kCtrl+u,move the cursor up half a screen
+kCtrl+b,move the cursor up one full screen
+kCtrl+d,move the cursor down half a screen
+kCtrl+f,move the cursor down one full screen
+kM,move the cursor to the middle of the screen
+kH,move the cursor to the top of the screen
+kL,move the cursor to the bottom of the screen
+kCtrl+o,move the cursor to the previous cursor position
+kCtrl+i,move the cursor to the next cursor position
+kCtrl+g,display the current line number and file status information
+kCtrl+e,scroll the screen down one line without moving the cursor
+kCtrl+y,scroll the screen up one line without moving the cursor
+kCtrl+f,scroll the screen down one full screen
+kCtrl+b,scroll the screen up one full screen
+kCtrl+d,scroll the screen down half a screen
+kCtrl+u,scroll the screen up half a screen
+ll,move the cursor two characters right
+3l,move the cursor three characters right
+W,move the cursor to the beginning of the next WORD
+E,move the cursor to the end of the current WORD
+B,move the cursor to the beginning of the previous WORD
+f<char>,move the cursor to the next occurrence of <char> on the current line
+t<char>,move the cursor to just before the next occurrence of <char> on the current line
+F<char>,move the cursor to the previous occurrence of <char> on the current line
+T<char>,move the cursor to just after the previous occurrence of <char> on the current line
+0,move the cursor to the beginning of the current line
+$,move the cursor to the end of the current line
+^,move the cursor to the first non-blank character of the current line
+gg,move the cursor to the beginning of the file
+G,move the cursor to the end of the file
+Ctrl+f,move the cursor one full screen down
+Ctrl+b,move the cursor one full screen up
+Ctrl+d,move the cursor half a screen down
+Ctrl+u,move the cursor half a screen up
+Ctrl+e,move the screen down one line
+Ctrl+y,move the screen up one line
+Ctrl+o,jump to the previous location in the jump list
+Ctrl+i,jump to the next location in the jump list
+Ctrl+],move the cursor to the definition of the function under the cursor
+Ctrl+t,move the cursor to the previous location in the jump list
+2b,move back two words
+3b,move back three words
+bW,move to the start of a WORD
+2bW,move back two WORDS
+3bW,move back three WORDS
+d2b,delete backward two words
+d3b,delete backward three words
+d2bW,delete backward two WORDS
+d3bW,delete backward three WORDS
+ciw,change inside word
+diw,delete inside word
+yiw,yank inside word
+ciB,change inside block
+diB,delete inside block
+yiB,yank inside block
+ciW,change inside WORD
+diW,delete inside WORD
+yiW,yank inside WORD
+dB,delete backward to the start of the current token
+2w,move to the start of the second next word
+3w,move to the start of the third next word
+d2w,delete the next two words
+d3w,delete the next three words
+dW,delete the next WORD
+d3W,delete the next three WORDS
+c2w,change the next two words
+c3w,change the next three words
+ciw,change inside the current word
+diw,delete inside the current word
+yiw,yank inside the current word
+daw,delete around the current word
+caw,change around the current word
+dW,delete from the cursor to the start of the next token
+d2W,delete from the cursor to the start of the next two tokens
+d3W,delete from the cursor to the start of the next three tokens
+d4W,delete from the cursor to the start of the next four tokens
+d5W,delete from the cursor to the start of the next five tokens
+d6W,delete from the cursor to the start of the next six tokens
+d7W,delete from the cursor to the start of the next seven tokens
+d8W,delete from the cursor to the start of the next eight tokens
+d9W,delete from the cursor to the start of the next nine tokens
+ge,move to the end of the previous word
+w,move to the beginning of the next word
+b,move to the beginning of the previous word
+d$e,delete from the cursor to the end of the current word
+dwe,delete from the cursor to the end of the next word
+ce,change the current word to the end of the next word
+yiw,yank the inner word under the cursor
+yiW,yank the inner WORD under the cursor
+ciw,change the inner word under the cursor
+ciW,change the inner WORD under the cursor
+d2e,delete to the end of the next two words
+d3e,delete to the end of the next three words
+d2we,"delete to the end of the next two words, including punctuation"
+d3we,"delete to the end of the next three words, including punctuation"
+d$e,"delete from the cursor to the end of the current line, including the end of the current word"
+d$E,"delete from the cursor to the end of the current line, including the end of the current WORD"
+d0e,"delete from the cursor to the beginning of the current line, including the end of the current word"
+d0E,"delete from the cursor to the beginning of the current line, including the end of the current WORD"
+dE,delete to the end of a token
+cE,change to the end of a token
+yE,yank to the end of a token
+d2E,delete to the end of the second token
+c3E,change to the end of the third token
+dEw,delete to the end of the current word
+dE$,delete to the end of the line
+dE0,delete to the beginning of the line
+dE3w,delete to the end of the third word
+dE2$,delete to the end of the second line
+dE%,delete to the matching parenthesis
+dE),delete to the end of the current sentence
+0d$,delete from the beginning to the end of the line
+0D,delete from the beginning to the end of the line without moving the cursor
+0w,move to the beginning of the next word
+0b,move to the beginning of the previous word
+0e,move to the end of the current word
+0E,move to the end of the current WORD
+0f<char>,move to the next occurrence of <char> in the current line
+0F<char>,move to the previous occurrence of <char> in the current line
+0t<char>,move to just before the next occurrence of <char> in the current line
+0T<char>,move to just before the previous occurrence of <char> in the current line
+0gg,move to the beginning of the file
+0G,move to the end of the file
+0H,move to the top of the screen
+0M,move to the middle of the screen
+0L,move to the bottom of the screen
+0Ctrl+u,move half a screen up
+0Ctrl+d,move half a screen down
+0Ctrl+f,move a full screen down
+0Ctrl+b,move a full screen up
+00,move to the beginning of the current line
+0^,move to the first non-blank character of the current line
+0$,move to the end of the current line
+0g_,move to the last non-blank character of the current line
+0,Move to the end of the current line
+0$,"Move to the end of the current line, including the newline character"
+0j$,"Move to the end of the line, then down one line"
+0k$,"Move to the end of the line, then up one line"
+0w$,"Move to the end of the current word, then to the end of the line"
+0b$,"Move to the end of the previous word, then to the end of the line"
+0f;$,"Move to the next occurrence of ';' on the current line, then to the end of the line"
+0t;$,"Move to just before the next occurrence of ';' on the current line, then to the end of the line"
+0d$,Delete from the cursor position to the end of the line
+0C$,Change from the cursor position to the end of the line
+0D$,Delete from the cursor position to the end of the line without entering insert mode
+0Y$,Yank from the cursor position to the end of the line
+0gU$,Change the case of the current line to uppercase
+0gu$,Change the case of the current line to lowercase
+0g~$,Toggle the case of the current line
+0>>$,Indent the current line one shiftwidth to the right
+0<<$,Indent the current line one shiftwidth to the left
+0gq$,Format the current line to fit within the 'textwidth' setting
+0gqG$,Format the current line and all following lines to fit within the 'textwidth' setting
+0,move to the beginning of the line
+$,move to the end of the line
+gg,move to the first line of the file
+G,move to the last line of the file
+e,move to the end of the next word
+f<char>,move to the next occurrence of <char> in the current line
+t<char>,move to just before the next occurrence of <char> in the current line
+F<char>,move to the previous occurrence of <char> in the current line
+T<char>,move to just before the previous occurrence of <char> in the current line
+d^,delete from the cursor position to the first non-blank character of the line
+c^,change from the cursor position to the first non-blank character of the line
+y^,yank from the cursor position to the first non-blank character of the line
+d0,delete from the cursor position to the beginning of the line
+c0,change from the cursor position to the beginning of the line
+y0,yank from the cursor position to the beginning of the line
+d$,delete from the cursor position to the end of the line
+c$,change from the cursor position to the end of the line
+y$,yank from the cursor position to the end of the line
+dgg,delete from the cursor position to the first line of the file
+cgg,change from the cursor position to the first line of the file
+ygg,yank from the cursor position to the first line of the file
+dG,delete from the cursor position to the last line of the file
+cG,change from the cursor position to the last line of the file
+yG,yank from the cursor position to the last line of the file
+dW,delete from the cursor position to the beginning of the next WORD
+cW,change from the cursor position to the beginning of the next WORD
+yW,yank from the cursor position to the beginning of the next WORD
+dB,delete from the cursor position to the beginning of the previous WORD
+cB,change from the cursor position to the beginning of the previous WORD
+yB,yank from the cursor position to the beginning of the previous WORD
+dE,delete from the cursor position to the end of the next WORD
+cE,change from the cursor position to the end of the next WORD
+yE,yank from the cursor position to the end of the next WORD
+dF<char>,delete from the cursor position to the next occurrence of <char> in the current line
+cF<char>,change from the cursor position to the next occurrence of <char> in the current line
+yF<char>,yank from the cursor position to the next occurrence of <char> in the current line
+dT<char>,delete from the cursor position to just before the next occurrence of <char> in the current line
+cT<char>,change from the cursor position to just before the next occurrence of <char> in the current line
+yT<char>,yank from the cursor position to just before the next occurrence of <char> in the current line
+dF<char>,delete from the cursor position to the previous occurrence of <char> in the current line
+cF<char>,change from the cursor position to the previous occurrence of <char> in the current line
+yF<char>,yank from the cursor position to the previous occurrence of <char> in the current line
+dT<char>,delete from the cursor position to just before the previous occurrence of <char> in the current line
+cT<char>,change from the cursor position to just before the previous occurrence of <char> in the current line
+yT<char>,yank from the cursor position to just before the previous occurrence of <char> in the current line
+d%,"delete from the cursor position to the matching parenthesis, bracket, or brace"
+c%,"change from the cursor position to the matching parenthesis, bracket, or brace"
+y%,"yank from the cursor position to the matching parenthesis, bracket, or brace"
+d{,delete from the cursor position to the beginning of the current paragraph
+c{,change from the cursor position to the beginning of the current paragraph
+y{,yank from the cursor position to the beginning of the current paragraph
+1G,move to the first line of the file
+#G,move to line number #
+#gg,move to line number #
+Ctrl + b,move backward one full screen
+Ctrl + d,move forward half a screen
+Ctrl + u,move backward half a screen
+Ctrl + e,move screen down one line
+Ctrl + y,move screen up one line
+Ctrl + f,move forward 1 full screen
+Ctrl + b,move back 1 full screen
+gg,move to the beginning of the file
+G,move to the end of the file
+H,move to the top of the screen
+M,move to the middle of the screen
+L,move to the bottom of the screen
+5j,move down 5 lines
+5k,move up 5 lines
+e,move to the end of the current word
+0,move to the beginning of the current line
+$,move to the end of the current line
+T<char>,move to just after the previous occurrence of <char> in the current line
+Hj,move to the top of the screen and down one line
+Hk,move to the top of the screen and up one line
+H0,move to the top of the screen and to the beginning of the line
+H$,move to the top of the screen and to the end of the line
+Hw,move to the top of the screen and to the beginning of the next word
+Hb,move to the top of the screen and to the beginning of the previous word
+Hf,move to the top of the screen and forward one character
+Hb,move to the top of the screen and backward one character
+Hgg,move to the top of the screen and to the beginning of the file
+HG,move to the top of the screen and to the end of the file
+HdG,move to the top of the screen and delete from the current position to the end of the file
+Hdd,move to the top of the screen and delete the current line
+Hyy,move to the top of the screen and yank (copy) the current line
+Hp,move to the top of the screen and paste after the current line
+Hddp,"move to the top of the screen, delete the current line, and paste it after the next line"
+H3j,move to the top of the screen and down three lines
+H3k,move to the top of the screen and up three lines
+H,move to the beginning of the line
+L,move to the end of the line
+Ctrl+u,move up half a screen
+Ctrl+d,move down half a screen
+Ctrl+f,move forward one screen
+Ctrl+b,move backward one screen
+Ctrl+e,scroll the screen down one line
+Ctrl+y,scroll the screen up one line
+Ctrl+g,display the current file name and position
+dL,delete from the cursor to the bottom of the screen
+yL,yank from the cursor to the bottom of the screen
+cL,change from the cursor to the bottom of the screen
+Lw,"move to the bottom of the screen, then to the beginning of the next word"
+L$,"move to the bottom of the screen, then to the end of the line"
+L0,"move to the bottom of the screen, then to the beginning of the line"
+Lgg,"move to the bottom of the screen, then to the top of the file"
+Ldd,"move to the bottom of the screen, then delete the current line"
+Lyy,"move to the bottom of the screen, then yank the current line"
+Lciw,"move to the bottom of the screen, then change the current word"
+Ldiw,"move to the bottom of the screen, then delete the current word"
+Lci(,"move to the bottom of the screen, then change the text inside parentheses"
+Ldi(,"move to the bottom of the screen, then delete the text inside parentheses"
+"Lci""","move to the bottom of the screen, then change the text inside double quotes"
+"Ldi""","move to the bottom of the screen, then delete the text inside double quotes"
+Lci',"move to the bottom of the screen, then change the text inside single quotes"
+Ldi',"move to the bottom of the screen, then delete the text inside single quotes"
+Lci{,"move to the bottom of the screen, then change the text inside curly braces"
+Ldi{,"move to the bottom of the screen, then delete the text inside curly braces"
+I,switch to insert mode at the beginning of the line
+A,switch to insert mode at the end of the line
+o,open a new line below and switch to insert mode
+O,open a new line above and switch to insert mode
+ea,switch to insert mode at the end of the current word
+E,move to the end of the current word and switch to insert mode
+ciw,change the current word and switch to insert mode
+diw,delete the current word
+yiw,yank the current word
+c$,change from the cursor to the end of the line and switch to insert mode
+d$,delete from the cursor to the end of the line
+y$,yank from the cursor to the end of the line
+c0,change from the cursor to the beginning of the line and switch to insert mode
+d0,delete from the cursor to the beginning of the line
+y0,yank from the cursor to the beginning of the line
+c2w,change the next two words and switch to insert mode
+y2w,yank the next two words
+IHello World,insert 'Hello World' at the beginning of the line
+d0I,delete from the beginning of the line and insert text at the beginning
+C0I,change from the beginning of the line and insert text at the beginning
+I<Ctrl-R><Ctrl-W>,insert the word under the cursor at the beginning of the line
+I<Ctrl-R><Ctrl-A>,insert the current date and time at the beginning of the line
+I<Ctrl-R><Ctrl-F>,insert the current file name at the beginning of the line
+I<Ctrl-R><Ctrl-L>,insert the current line number at the beginning of the line
+I<Ctrl-R><Ctrl-P>,insert the previous command at the beginning of the line
+I<Ctrl-R><Ctrl-N>,insert the next command at the beginning of the line
+I<Ctrl-R><Ctrl-T>,insert the output of a shell command at the beginning of the line
+I<Ctrl-R><Ctrl-D>,insert the current directory at the beginning of the line
+I<Ctrl-R><Ctrl-K>,insert the current time at the beginning of the line
+I<Ctrl-R><Ctrl-M>,insert the current mode at the beginning of the line
+I<Ctrl-R><Ctrl-Y>,insert the current clipboard content at the beginning of the line
+I<Ctrl-R><Ctrl-X><Ctrl-F>,insert the name of the file under the cursor at the beginning of the line
+I<Ctrl-R><Ctrl-X><Ctrl-L>,insert the current line number at the beginning of the line
+aa,switch to insert mode after the cursor on the next line
+aB,switch to insert mode after the cursor within the current block
+aW,switch to insert mode after the cursor within the current WORD
+a$,switch to insert mode after the cursor at the end of the line
+a0,switch to insert mode after the cursor at the beginning of the line
+a^,switch to insert mode after the cursor at the first non-blank character of the line
+aG,switch to insert mode after the cursor at the end of the document
+aH,switch to insert mode after the cursor at the top of the screen
+aL,switch to insert mode after the cursor at the bottom of the screen
+aM,switch to insert mode after the cursor at the middle of the screen
+a%,"switch to insert mode after the cursor matching the parenthesis, bracket, or brace"
+a/,switch to insert mode after the cursor at the beginning of the current sentence
+a),switch to insert mode after the cursor at the beginning of the next sentence
+a_,switch to insert mode after the cursor at the beginning of the current line
+A,Insert text at the end of the line
+A,Append text at the end of the current line
+A,Enter insert mode at the end of the line
+A,Move to the end of the line and start inserting
+A,Add text after the last character of the line
+A,Quickly add content to the end of the line
+A,Jump to the end of the line and begin editing
+A,Efficiently insert text at the line's end
+A,Append new text after the current line's content
+A,Move cursor to the end of the line and enter insert mode
+A,Add new content at the end of the current line
+A,Quickly navigate to the end of the line and start typing
+A,Insert text after the last character on the line
+A,Jump to the end of the line and begin inserting text
+A,Efficiently add content to the end of the line
+A,Move to the end of the line and start editing
+A,Quickly insert text at the end of the line
+A,Jump to the end of the line and begin typing
+o<Esc>,open a new line below and return to Normal mode
+O<Esc>,open a new line above and return to Normal mode
+o3<Esc>,open three new lines below and return to Normal mode
+O3<Esc>,open three new lines above and return to Normal mode
+oA<Esc>,open a new line below and append text after the cursor
+O0<Esc>,open a new line above and insert text at the beginning of the line
+oC<Esc>,open a new line below and change the current line
+O3j<Esc>,open a new line above and move the cursor down three lines
+o$<Esc>,open a new line below and move the cursor to the end of the line
+O^<Esc>,open a new line above and move the cursor to the first non-blank character
+o3k<Esc>,open three new lines below and move the cursor up three lines
+O2l<Esc>,open two new lines above and move the cursor right two columns
+o3w<Esc>,open three new lines below and move the cursor forward three words
+O2b<Esc>,open two new lines above and move the cursor backward two words
+o3e<Esc>,open three new lines below and move the cursor to the end of the third word
+O2ge<Esc>,open two new lines above and move the cursor to the last non-blank character of the second line
+o3gg<Esc>,open three new lines below and move the cursor to the beginning of the third line
+O2G<Esc>,open two new lines above and move the cursor to the end of the second line
+o3f<Esc>,open three new lines below and move the cursor to the next occurrence of 'f' in the third line
+O2F<Esc>,open two new lines above and move the cursor to the previous occurrence of 'F' in the second line
+O0,open a new line above the current one and move to the beginning of the line
+O$,open a new line above the current one and move to the end of the line
+O3j,open a new line above the current one and move down three lines
+O3k,open a new line above the current one and move up three lines
+Ow,open a new line above the current one and move to the beginning of the next word
+O3w,open a new line above the current one and move to the beginning of the third next word
+O3$,open a new line above the current one and move to the end of the third next line
+O30,open a new line above the current one and move to the beginning of the third next line
+eaA,insert text at the end of the word and append a space
+dwe,delete from cursor to the end of the word
+cwe,change from cursor to the end of the word
+ywe,yank from cursor to the end of the word
+d$ea,delete from cursor to the end of the line and insert text at the end of the word
+c$ea,change from cursor to the end of the line and insert text at the end of the word
+y$ea,yank from cursor to the end of the line and insert text at the end of the word
+d2we,delete two words forward from cursor
+c2we,change two words forward from cursor
+y2we,yank two words forward from cursor
+d3ea,delete three words forward from cursor and insert text at the end of the word
+c3ea,change three words forward from cursor and insert text at the end of the word
+y3ea,yank three words forward from cursor and insert text at the end of the word
+d2$ea,delete from cursor to the end of the line twice and insert text at the end of the word
+c2$ea,change from cursor to the end of the line twice and insert text at the end of the word
+y2$ea,yank from cursor to the end of the line twice and insert text at the end of the word
+rA,replace the current character with 'A'
+r1,replace the current character with '1'
+r.,replace the current character with '.'
+r/,replace the current character with ':'
+r;,replace the current character with ';'
+"r,","replace the current character with ','"
+r?,replace the current character with '?'
+r!,replace the current character with '!'
+r@,replace the current character with '@'
+r#,replace the current character with '#'
+r$,replace the current character with '$'
+r%,replace the current character with '%'
+r^,replace the current character with '^'
+r&,replace the current character with '&'
+r*,replace the current character with '*'
+r(,replace the current character with '('
+r),replace the current character with ')'
+r[,replace the current character with '['
+r],replace the current character with ']'
+r{,replace the current character with '{'
+r<,replace the current character with '<'
+r>,replace the current character with '>'
+dd,delete the current line
+2dd,delete the current line and the line below
+3dd,delete the current line and the next two lines
+dG,delete from the current line to the end of the file
+dgg,delete from the current line to the beginning of the file
+daw,delete the word under the cursor along with surrounding whitespace
+diw,delete the word under the cursor without surrounding whitespace
+d2w,delete the current word and the next word
+d3w,delete the current word and the next two words
+d$w,delete from the cursor position to the end of the current word
+d0w,delete from the cursor position to the beginning of the current word
+d2j,delete the current line and the next line
+d3j,delete the current line and the next two lines
+d2k,delete the current line and the previous line
+d3k,delete the current line and the previous two lines
+C,replace from the cursor to the end of the line
+Cw,replace from the cursor to the end of the current word
+C2w,replace from the cursor to the end of the next two words
+C$,replace from the cursor to the end of the line
+dC,delete from the cursor to the end of the line
+dCw,delete from the cursor to the end of the current word
+dC2w,delete from the cursor to the end of the next two words
+dC$,delete from the cursor to the end of the line
+CwA,replace from the cursor to the end of the current word and append after the word
+C2wA,replace from the cursor to the end of the next two words and append after the words
+C$A,replace from the cursor to the end of the line and append after the line
+dCwA,delete from the cursor to the end of the current word and append after the word
+dC2wA,delete from the cursor to the end of the next two words and append after the words
+dC$A,delete from the cursor to the end of the line and append after the line
+CwI,replace from the cursor to the end of the current word and insert before the word
+C2wI,replace from the cursor to the end of the next two words and insert before the words
+C$I,replace from the cursor to the end of the line and insert before the line
+dW,delete from the cursor to the beginning of the next word
+c$,change from the cursor to the end of the line
+cW,change from the cursor to the beginning of the next word
+"ci""",change inside the current double quotes
+"di""",delete inside the current double quotes
+"yi""",yank inside the current double quotes
+ci(,change inside the current parentheses
+di(,delete inside the current parentheses
+yi(,yank inside the current parentheses
+ci{,change inside the current curly braces
+di{,delete inside the current curly braces
+yi{,yank inside the current curly braces
+ci[,change inside the current square brackets
+di[,delete inside the current square brackets
+yi[,yank inside the current square brackets
+cB,change from the cursor to the beginning of the previous word
+dB,delete from the cursor to the beginning of the previous word
+cE,change from the cursor to the end of the current word
+dE,delete from the cursor to the end of the current word
+d,delete a character (and move into insert mode)
+dw,delete a word (and move into insert mode)
+dW,delete a WORD (and move into insert mode)
+dd,delete a line (and move into insert mode)
+d$,delete from cursor to end of line (and move into insert mode)
+d0,delete from cursor to beginning of line (and move into insert mode)
+dG,delete from cursor to end of file (and move into insert mode)
+dgg,delete from cursor to beginning of file (and move into insert mode)
+d2j,delete two lines below cursor (and move into insert mode)
+d2k,delete two lines above cursor (and move into insert mode)
+d3w,delete three words forward (and move into insert mode)
+d3b,delete three words backward (and move into insert mode)
+d3$,delete from cursor to end of line three lines below (and move into insert mode)
+d3gg,delete from cursor to beginning of file three lines above (and move into insert mode)
+dFf,delete from cursor to first occurrence of 'f' (and move into insert mode)
+dTt,delete from cursor to just before first occurrence of 't' (and move into insert mode)
+d/word,delete from cursor to next occurrence of 'word' (and move into insert mode)
+d?word,delete from cursor to previous occurrence of 'word' (and move into insert mode)
+3J,merge the next three lines to the current one with spaces in between
+J3,merge the current line with the next three lines with spaces in between
+dJ,delete the current line and merge the next one with a space in between
+d3J,delete the current line and merge the next three lines with spaces in between
+d2J,delete the current line and merge the next two lines with spaces in between
+Jd,merge the current line with the next one and delete it
+3Jd,merge the current line with the next three lines and delete them
+Jdd,merge the current line with the next one and delete the current line
+J2dd,merge the current line with the next two lines and delete the current line
+J3dd,merge the current line with the next three lines and delete the current line
+Jp,merge the current line with the next one and paste the clipboard after it
+3Jp,merge the current line with the next three lines and paste the clipboard after it
+Jyy,merge the current line with the next one and yank the result
+3Jyy,merge the current line with the next three lines and yank the result
+J3p,merge the current line with the next three lines and paste the clipboard before it
+J2p,merge the current line with the next two lines and paste the clipboard after it
+J2yy,merge the current line with the next two lines and yank the result
+gJ3,merge the next three lines to the current one with no space in between them
+gJ2j,move down two lines and merge the line below to the current one with no space in between them
+gJ3k,move up three lines and merge the line below to the current one with no space in between them
+gJd,delete the line below and merge it to the current one with no space in between them
+gJ3dd,delete the next three lines and merge them to the current one with no space in between them
+gJ3yy,yank the next three lines and merge them to the current one with no space in between them
+gJ3p,paste the next three lines below and merge them to the current one with no space in between them
+gJ3P,paste the next three lines above and merge them to the current one with no space in between them
+gJ3c,change the next three lines and merge them to the current one with no space in between them
+gJ3C,change the next three lines to the end of the line and merge them to the current one with no space in between them
+gJ3d$,delete from the cursor to the end of the line and merge it to the current one with no space in between them
+gJ3D,delete from the cursor to the end of the line and merge it to the current one with no space in between them
+gJ3dw,delete the next three words and merge them to the current one with no space in between them
+gJ3dW,delete the next three WORDS and merge them to the current one with no space in between them
+gJ3de,delete the next three sentences and merge them to the current one with no space in between them
+gJ3dE,delete the next three SENTENCES and merge them to the current one with no space in between them
+u,undo the last change
+Ctrl-r,redo the last undone change
+dw,delete word
+dW,delete WORD
+dd,delete line
+D,delete to end of line
+d$,delete to end of line
+d0,delete to beginning of line
+dG,delete to end of file
+dgg,delete to beginning of file
+d/,delete up to next occurrence of pattern
+d?pattern,delete up to previous occurrence of pattern
+dF<char>,delete up to and including previous occurrence of character
+dT<char>,delete up to but not including previous occurrence of character
+d%,delete between matching parentheses or brackets
+daw,delete a word including trailing whitespace
+diw,delete inner word
+das,delete a sentence
+dis,delete inner sentence
+"da""",delete a double-quoted string including quotes
+"di""",delete inner double-quoted string
+dap,delete a paragraph
+di(,delete inner parentheses
+da(,delete parentheses including contents
+di{,delete inner braces
+da{,delete braces including contents
+di[,delete inner brackets
+da[,delete brackets including contents
+"di""",delete inner double quotes
+"da""",delete double quotes including contents
+d',delete to previous mark
+d`,delete to previous position
+dH,delete to top of screen
+dM,delete to middle of screen
+dL,delete to bottom of screen
+dCtrl+U,delete half a screen up
+dCtrl+D,delete half a screen down
+dCtrl+F,delete one screen down
+dCtrl+B,delete one screen up
+dCtrl+E,delete one line down
+dCtrl+Y,delete one line up
+dCtrl+W,delete one word backward
+dCtrl+U,delete one word forward
+dCtrl+T,delete one tab backward
+dCtrl+D,delete one tab forward
+dCtrl+L,delete one line forward
+dCtrl+K,delete to end of line
+dCtrl+J,delete to end of paragraph
+dCtrl+Q,delete to end of block
+dCtrl+R,delete to end of function
+dCtrl+S,delete to end of class
+dCtrl+P,delete to end of method
+dCtrl+O,delete to end of statement
+dCtrl+N,delete to end of expression
+dCtrl+M,delete to end of assignment
+dCtrl+G,delete to end of loop
+dCtrl+H,delete to end of condition
+dCtrl+I,delete to end of switch
+dCtrl+J,delete to end of case
+dCtrl+K,delete to end of default
+dCtrl+L,delete to end of try
+dCtrl+M,delete to end of catch
+dCtrl+N,delete to end of finally
+dCtrl+O,delete to end of function call
+dCtrl+P,delete to end of function definition
+dCtrl+Q,delete to end of class definition
+dCtrl+R,delete to end of method definition
+dCtrl+S,delete to end of statement
+dCtrl+T,delete to end of expression
+dCtrl+U,delete to end of assignment
+dCtrl+V,delete to end of loop
+dCtrl+W,delete to end of condition
+dCtrl+X,delete to end of switch
+dCtrl+Y,delete to end of case
+dCtrl+Z,delete to end of default
+dCtrl+A,delete to end of try
+dCtrl+B,delete to end of catch
+dCtrl+C,delete to end of finally
+dCtrl+D,delete to end of function call
+dCtrl+E,delete to end of function definition
+dCtrl+F,delete to end of class definition
+dCtrl+G,delete to end of method definition
+dCtrl+H,delete to end of statement
+dCtrl+I,delete to end of expression
+dCtrl+J,delete to end of assignment
+dCtrl+K,delete to end of loop
+dCtrl+L,delete to end of condition
+dCtrl+M,delete to end of switch
+dCtrl+N,delete to end of case
+dCtrl+O,delete to end of default
+dCtrl+P,delete to end of try
+dCtrl+Q,delete to end of catch
+dCtrl+R,delete to end of finally
+dCtrl+S,delete to end of function call
+dCtrl+T,delete to end of function definition
+dCtrl+U,delete to end of class definition
+dCtrl+V,delete to end of method definition
+dCtrl+W,delete to end of statement
+dCtrl+X,delete to end of expression
+dCtrl+Y,delete to end of assignment
+dCtrl+Z,delete to end of loop
+dCtrl+A,delete to end of condition
+dCtrl+B,delete to end of switch
+dCtrl+C,delete to end of case
+dCtrl+D,delete to end of default
+dCtrl+E,delete to end of try
+dCtrl+F,delete to end of catch
+dCtrl+G,delete to end of finally
+dCtrl+H,delete to end of function call
+dCtrl+I,delete to end of function definition
+dCtrl+J,delete to end of class definition
+dCtrl+K,delete to end of method definition
+dCtrl+L,delete to end of statement
+dCtrl+M,delete to end of expression
+dCtrl+N,delete to end of assignment
+dCtrl+O,delete to end of loop
+dCtrl+P,delete to end of condition
+dCtrl+Q,delete to end of switch
+dCtrl+R,delete to end of case
+dCtrl+S,delete to end of default
+dCtrl+T,delete to end of try
+dCtrl+U,delete to end of catch
+dCtrl+V,delete to end of finally
+dCtrl+W,delete to end of function call
+dCtrl+X,delete to end of function definition
+dCtrl+Y,delete to end of class definition
+dCtrl+Z,delete to end of method definition
+dCtrl+A,delete to end of statement
+dCtrl+B,delete to end of expression
+dCtrl+C,delete to end of assignment
+dCtrl+D,delete to end of loop
+dCtrl+E,delete to end of condition
+dCtrl+F,delete to end of switch
+dCtrl+G,delete to end of case
+dCtrl+H,delete to end of default
+dCtrl+I,delete to end of try
+dCtrl+J,delete to end of catch
+dCtrl+K,delete to end of finally
+Y,copy (yank) entire line
+y$,copy (yank) from cursor to end of line
+y0,copy (yank) from cursor to beginning of line
+y^,copy (yank) from cursor to first non-blank character of line
+yG,copy (yank) from cursor to end of file
+ygg,copy (yank) from cursor to beginning of file
+y2j,copy (yank) current line and next line
+y2k,copy (yank) current line and previous line
+y3w,copy (yank) current word and next two words
+y3b,copy (yank) current word and previous two words
+y/word,copy (yank) from cursor to next occurrence of 'word'
+y?word,copy (yank) from cursor to previous occurrence of 'word'
+y%,"copy (yank) from cursor to matching parenthesis, bracket, or brace"
+y$h,"copy (yank) from cursor to end of line, excluding the last character"
+y0l,"copy (yank) from cursor to beginning of line, including the first character"
+yy,copy the current line
+2yy,copy the current line and the next line
+3yy,copy the current line and the next two lines
+yyj,copy the current line and the line below
+yyk,copy the current line and the line above
+y$y$,copy from the cursor to the end of the line
+y0y0,copy from the cursor to the beginning of the line
+yG,copy from the cursor to the end of the file
+ygg,copy from the cursor to the beginning of the file
+y2w,copy the current word and the next word
+y3b,copy the current word and the previous two words
+y2j,"copy the current line and the next line, then move down two lines"
+y2k,"copy the current line and the previous line, then move up two lines"
+y/word,copy from the cursor to the next occurrence of 'word'
+y?word,copy from the cursor to the previous occurrence of 'word'
+"y2f,","copy from the cursor to the next comma, including the comma"
+"y2F,","copy from the cursor to the previous comma, including the comma"
+"y2t,",copy from the cursor to just before the next comma
+"y2T,",copy from the cursor to just before the previous comma
+dd,delete the entire line
+3dd,delete three consecutive lines
+dG,delete from the cursor to the end of the file
+dgg,delete from the cursor to the beginning of the file
+dW,delete the current word and the following whitespace
+dB,delete the current word and the preceding whitespace
+dE,delete to the end of the current word
+dF<char>,delete up to and including the next occurrence of <char> in the current line
+dT<char>,delete up to but not including the next occurrence of <char> in the current line
+d/<pattern>,delete from the cursor to the next occurrence of <pattern>
+d?pattern,delete from the cursor to the previous occurrence of <pattern>
+d%,"delete the content inside the current pair of matching parentheses, brackets, or braces"
+daw,"delete a word under the cursor, including surrounding whitespace"
+diw,"delete the word under the cursor, excluding surrounding whitespace"
+d3k,delete the previous three lines
+2dd,delete the next two lines
+d5k,delete the current line and the previous four lines
+d3b,delete the previous three words
+"d2f,",delete up to and including the next comma
+d2t.,delete up to but not including the next period
+d/word,delete up to and including the next occurrence of 'word'
+d?word,delete up to and including the previous occurrence of 'word'
+daw,delete a word including surrounding whitespace
+diw,delete inner word without surrounding whitespace
+dab,delete a block of text surrounded by braces
+d2dd,delete the current line and the next line
+d2D,delete from the cursor to the end of the next line
+2p,paste the yanked content twice after the cursor
+ywP,yank a word and paste it before the cursor
+dwp,delete a word and paste it after the cursor
+y$P,yank from the cursor to the end of the line and paste it before the cursor
+3ddp,delete three lines and paste them after the cursor
+yyP,yank the current line and paste it before the cursor
+d2jP,delete two lines below and paste them before the cursor
+yapP,yank a paragraph and paste it before the cursor
+d2wp,delete two words and paste them after the cursor
+y2wp,yank two words and paste them after the cursor
+d$P,delete from the cursor to the end of the line and paste it before the cursor
+y2jP,yank two lines below and paste them before the cursor
+d2ddp,delete two lines and paste them after the cursor
+y2ddP,yank two lines and paste them before the cursor
+dP,delete the line and paste it before the cursor
+2P,paste the yanked content twice before the cursor
+d2P,delete two lines and paste them before the cursor
+P2,paste the yanked content twice before the cursor
+Pj,paste the yanked content before the current line and move down one line
+Pk,paste the yanked content before the current line and move up one line
+P$,paste the yanked content before the end of the line
+P0,paste the yanked content before the beginning of the line
+Pw,paste the yanked content before the current word
+Pe,paste the yanked content before the current word's end
+P2w,paste the yanked content before the next two words
+P3e,paste the yanked content before the end of the next three words
+P%,paste the yanked content before the matching parenthesis
+P/,paste the yanked content before the next occurrence of the search pattern
+Pf,paste the yanked content before the next occurrence of the character 'f' in the current line
+P2f,paste the yanked content before the next two occurrences of the character 'f' in the current line
+c,change the marked text
+Ctrl+r,redo the last undone change
+x,delete the character under the cursor
+X,delete the character before the cursor
+yy,yank the current line
+3dd,delete the current and next two lines
+3yy,yank the current and next two lines
+dw,delete the current word
+3dw,delete the current and next two words
+cw,change the current word
+3cw,change the current and next two words
+D,delete from the cursor to the end of the line
+C,change from the cursor to the end of the line
+ci(,change inside the parentheses
+di(,delete inside the parentheses
+yi(,yank inside the parentheses
+ca(,change around the parentheses
+da(,delete around the parentheses
+ya(,yank around the parentheses
+"ci""",change inside the double quotes
+"di""",delete inside the double quotes
+"yi""",yank inside the double quotes
+"ca""",change around the double quotes
+"da""",delete around the double quotes
+"ya""",yank around the double quotes
+ci',change inside the single quotes
+di',delete inside the single quotes
+yi',yank inside the single quotes
+ca',change around the single quotes
+da',delete around the single quotes
+ya',yank around the single quotes
+ci{,change inside the curly braces
+di{,delete inside the curly braces
+yi{,yank inside the curly braces
+ca{,change around the curly braces
+da{,delete around the curly braces
+ya{,yank around the curly braces
+ci[,change inside the square brackets
+di[,delete inside the square brackets
+yi[,yank inside the square brackets
+ca[,change around the square brackets
+da[,delete around the square brackets
+ya[,yank around the square brackets
+Vj,select the current line and the line below
+V2j,select the current line and the next two lines
+V3k,select the current line and the two lines above
+V$,select from the cursor position to the end of the current line
+V0,select from the cursor position to the beginning of the current line
+Vgg,select from the cursor position to the beginning of the file
+VG,select from the cursor position to the end of the file
+Vw,select the current word
+V2w,select the current word and the next word
+Vb,select the current word and the previous word
+"Vf,",select from the cursor position to the next comma
+"V2f,",select from the cursor position to the second comma ahead
+V3t.,select from the cursor position to just before the third occurrence of a period
+V3T.,select from the cursor position to just after the third occurrence of a period
+Vd$,delete the selected lines from the cursor position to the end of the line
+Vd0,delete the selected lines from the cursor position to the beginning of the line
+Vdgg,delete the selected lines from the cursor position to the beginning of the file
+VdG,delete the selected lines from the cursor position to the end of the file
+Vdw,delete the selected word
+V2dw,delete the selected word and the next word
+Vdb,delete the selected word and the previous word
+"Vdf,",delete the selected text from the cursor position to the next comma
+"V2df,",delete the selected text from the cursor position to the second comma ahead
+V3dt.,delete the selected text from the cursor position to just before the third occurrence of a period
+V3dT.,delete the selected text from the cursor position to just after the third occurrence of a period
+"Ctrl+v, I",insert text at the beginning of each line in the block
+"Ctrl+v, A",append text at the end of each line in the block
+"Ctrl+v, d",delete the selected block
+"Ctrl+v, y",yank (copy) the selected block
+"Ctrl+v, c",change the selected block
+"Ctrl+v, >",indent the selected block
+"Ctrl+v, <",un-indent the selected block
+"Ctrl+v, r",replace the selected block with a single character
+"Ctrl+v, s",substitute the selected block with new text
+"Ctrl+v, o",move the cursor to the other end of the block
+"Ctrl+v, p",paste the yanked block after the cursor
+"Ctrl+v, P",paste the yanked block before the cursor
+"Ctrl+v, u",convert the selected block to uppercase
+"Ctrl+v, l",convert the selected block to lowercase
+"Ctrl+v, ~",toggle the case of the selected block
+"Ctrl+v, J",join the lines in the selected block
+"Ctrl+v, D",delete the selected block without yanking
+"Ctrl+v, C",change the selected block without yanking
+"Ctrl+v, Y",yank the selected block without deleting
+"Ctrl+v, /",search within the selected block
+"Ctrl+v, n",find the next occurrence within the selected block
+"Ctrl+v, N",find the previous occurrence within the selected block
+d$,delete from cursor to end of line
+dG,delete from cursor to end of file
+dgg,delete from cursor to beginning of file
+d%,delete from cursor to matching parenthesis or bracket
+d2j,delete current line and next two lines
+d3w,delete current word and next two words
+d3t;,delete from cursor to third occurrence of ';'
+d/word,delete from cursor to next occurrence of 'word'
+d?word,delete from cursor to previous occurrence of 'word'
+"d2f,","delete from cursor to second occurrence of ','"
+d3F.,delete from cursor to third occurrence of '.'
+d2),delete from cursor to second closing parenthesis
+d2],delete from cursor to second closing bracket
+"d2""",delete from cursor to second double quote
+d2',delete from cursor to second single quote
+d2`,delete from cursor to second backtick
+d2<,delete from cursor to second less-than sign
+vaw,visually select a word
+daw,delete a word
+caw,change a word
+yaw,yank (copy) a word
+dab,delete a block with ()
+aB,select a block with {
+ciB,change inside a block with {
+caB,change around a block with {
+diB,delete inside a block with {
+daB,delete around a block with {
+yiB,yank inside a block with {
+yaB,yank around a block with {
+viB,visually select inside a block with {
+vaB,visually select around a block with {
+<at>,select a block with <>
+<a>,select a block with ()
+<b>,select a block with []
+<c>,select a block with {
+<d>,"select a block with """""""""
+<f>,select a block with ''
+<g>,select a block with ``
+<h>,select a block with <> and delete it
+<i>,select a block with () and delete it
+<j>,select a block with [] and delete it
+<k>,select a block with {
+<l>,"select a block with """""""" and delete it"
+<m>,select a block with '' and delete it
+<n>,select a block with `` and delete it
+<o>,select a block with <> and yank it
+<p>,select a block with () and yank it
+<q>,select a block with [] and yank it
+<r>,select a block with {
+<s>,"select a block with """""""" and yank it"
+yiB,yank inner block with {
+ciB,change inner block with {
+diB,delete inner block with {
+viB,visually select inner block with {
+yiBf{,yank inner block with {
+ciBf{,change inner block with {
+diBf{,delete inner block with {
+viBf{,visually select inner block with {
+yiB/,yank inner block with {
+ciB/,change inner block with {
+diB/,delete inner block with {
+viB/,visually select inner block with {
+yiB%,yank inner block with {
+ciB%,change inner block with {
+diB%,delete inner block with {                                {}
+viB%,visually select inner block with {
+yiB),yank inner block with {
+ciB),change inner block with {
+diB),delete inner block with {
+viB),visually select inner block with {
+ci<,change inner block with <>
+di<,delete inner block with <>
+yi<,yank inner block with <>
+ca<,change around block with <>
+da<,delete around block with <>
+ya<,yank around block with <>
+dF>,delete until the previous '>' character
+dT>,delete until just before the previous '>' character
+cF>,change until the previous '>' character
+cT>,change until just before the previous '>' character
+yF>,yank until the previous '>' character
+yT>,yank until just before the previous '>' character
+d/<pattern>,delete until the previous occurrence of <pattern>
+c/<pattern>,change until the previous occurrence of <pattern>
+y/<pattern>,yank until the previous occurrence of <pattern>
+d/<pattern>/,delete until the next occurrence of <pattern>
+c/<pattern>/,change until the next occurrence of <pattern>
+y/<pattern>/,yank until the next occurrence of <pattern>
+d%,delete until the matching parenthesis or bracket
+c%,change until the matching parenthesis or bracket
+y%,yank until the matching parenthesis or bracket
+dW,delete the current word
+cW,change the current word
+yW,yank the current word
+dB,delete the current block
+cB,change the current block
+yB,yank the current block
+yw,yank word
+yW,yank WORD
+yy,yank current line
+y$,yank to end of line
+y0,yank to beginning of line
+yG,yank to end of file
+ygg,yank to beginning of file
+y2w,yank two words
+y3j,yank three lines down
+y3k,yank three lines up
+y$y,yank from cursor to end of line
+y0y,yank from cursor to beginning of line
+yGg,yank from cursor to end of file
+yggg,yank from cursor to beginning of file
+y2j,yank two lines down
+y2k,yank two lines up
+de,delete to end of word
+dd,delete current line
+d3w,delete three words
+d2j,delete two lines down
+d2k,delete two lines up
+d/word,delete up to next occurrence of 'word'
+d?word,delete up to previous occurrence of 'word'
+d%,delete to matching parenthesis or bracket
+"d2f,","delete up to and including the second occurrence of ','"
+"d2F,","delete up to and including the second occurrence of ',' backwards"
+d3t.,delete up to and including the third occurrence of '.'
+d3T.,delete up to and including the third occurrence of '.' backwards
+yw,yank the current word
+yW,yank the current WORD
+yG,yank from the cursor to the end of the file
+d2W,delete the next two WORDS
+d/hello,delete until the next occurrence of 'hello'
+d?world,delete until the previous occurrence of 'world'
+dF',delete until the previous single quote character
+dT',delete until just before the previous single quote character
+"di""",delete inside double quotes
+di',delete inside single quotes
+di(,delete inside parentheses
+di[,delete inside square brackets
+di{,delete inside curly braces
+di<,delete inside angle brackets
+di>,delete inside angle brackets
+guu,change the current line to lowercase
+guw,change the current word to lowercase
+gu$,change from the cursor to the end of the line to lowercase
+guG,change from the cursor to the end of the file to lowercase
+gu0,change from the cursor to the beginning of the line to lowercase
+gu2j,change the next two lines to lowercase
+gu%,change the text between matching parentheses to lowercase
+"gu""",change the text inside double quotes to lowercase
+gu',change the text inside single quotes to lowercase
+gu(,change the text inside parentheses to lowercase
+gu{,change the text inside curly braces to lowercase
+gu[,change the text inside square brackets to lowercase
+gu<,change the text inside angle brackets to lowercase
+guaw,change the current word and surrounding whitespace to lowercase
+guap,change the current paragraph to lowercase
+guat,change the current HTML/XML tag to lowercase
+gu2w,change the next two words to lowercase
+gu3j,change the next three lines to lowercase
+gUiw,change the current word to uppercase
+gUaw,change the current word and surrounding whitespace to uppercase
+gU2w,change the next two words to uppercase
+gU$,change from the cursor to the end of the line to uppercase
+gU0,change from the cursor to the beginning of the line to uppercase
+gUgg,change from the cursor to the beginning of the file to uppercase
+gUGG,change from the cursor to the end of the file to uppercase
+gU3j,change the next three lines to uppercase
+gU%,change the entire file to uppercase
+gU3w,change the next three words to uppercase
+gU2b,change the previous two words to uppercase
+gU2e,change the next two words to uppercase
+gU2B,change the previous two words to uppercase
+gU2E,change the next two words to uppercase
+gU2W,change the previous two WORDS to uppercase
+gU2E,change the next two WORDS to uppercase
+gU2B,change the previous two WORDS to uppercase
+*w,move to the beginning of the next occurrence of the current word
+*e,move to the end of the next occurrence of the current word
+*b,move to the beginning of the previous occurrence of the current word
+*ge,move to the end of the previous occurrence of the current word
+*f<char>,move to the next occurrence of the character under the cursor in the current line
+*t<char>,move to just before the next occurrence of the character under the cursor in the current line
+*F<char>,move to the previous occurrence of the character under the cursor in the current line
+*T<char>,move to just before the previous occurrence of the character under the cursor in the current line
+*d,delete the current word
+*dw,delete the current word
+*dW,delete the current WORD
+*dd,delete the current line
+*c,change the current word
+*cw,change the current word
+*cW,change the current WORD
+*cc,change the current line
+*y,yank (copy) the current word
+*yw,yank the current word
+*yW,yank the current WORD
+*yy,yank the current line
+*p,paste the yanked or deleted content after the cursor
+*P,paste the yanked or deleted content before the cursor
+#,Jump to previous instance of the current word
+d#,Delete from the cursor to the previous instance of the current word
+y#,Yank from the cursor to the previous instance of the current word
+c#,Change from the cursor to the previous instance of the current word
+d#d,Delete the current line and the previous instance of the current word
+y#y,Yank the current line and the previous instance of the current word
+c#c,Change the current line and the previous instance of the current word
+d#p,Delete from the cursor to the previous instance of the current word and paste it after the cursor
+y#P,Yank from the cursor to the previous instance of the current word and paste it before the cursor
+d#u,Delete from the cursor to the previous instance of the current word and undo the change
+y#U,Yank from the cursor to the previous instance of the current word and redo the change
+d#r,Delete from the cursor to the previous instance of the current word and replace the deleted text with 'r'
+y#s,Yank from the cursor to the previous instance of the current word and substitute the yanked text with 's'
+d#f,Delete from the cursor to the previous instance of the current word and find the next occurrence of 'f'
+y#t,Yank from the cursor to the previous instance of the current word and move the cursor to just before the next occurrence of 't'
+d#g~,Delete from the cursor to the previous instance of the current word and swap the case of the deleted text
+y#gu,Yank from the cursor to the previous instance of the current word and convert the yanked text to lowercase
+c#gU,Change from the cursor to the previous instance of the current word and convert the changed text to uppercase
+db,delete backward word
+dB,delete backward WORD
+dE,delete to end of WORD
+d^,delete to first non-blank character of line
+dgn,delete to next search match
+dgN,delete to previous search match
+d3w,delete three words forward
+d3b,delete three words backward
+d3e,delete to end of third word forward
+d3E,delete to end of third WORD forward
+d3$,delete to end of line three lines down
+d3^,delete to first non-blank character of line three lines up
+d?pattern,delete backward until the previous occurrence of the pattern
+c?pattern,change backward until the previous occurrence of the pattern
+y?pattern,yank backward until the previous occurrence of the pattern
+dgn,delete the next occurrence of the search pattern
+dN,delete the previous occurrence of the search pattern
+cgn,change the next occurrence of the search pattern
+cN,change the previous occurrence of the search pattern
+ygn,yank the next occurrence of the search pattern
+yN,yank the previous occurrence of the search pattern
+Nw,move the cursor to the previous word matching the search pattern
+dN$,delete from the cursor position to the end of the previous matching line
+Nf<char>,move the cursor to the previous occurrence of <char>
+dNf<char>,delete from the cursor position to the previous occurrence of <char>
+N/<pattern>,search for the previous occurrence of <pattern>
+dN/<pattern>,delete from the cursor position to the previous occurrence of <pattern>
+Ngg,move the cursor to the previous line matching the search pattern
+dNgg,delete from the cursor position to the previous line matching the search pattern
+N%,"move the cursor to the previous matching parenthesis, bracket, or brace"
+dN%,"delete from the cursor position to the previous matching parenthesis, bracket, or brace"
+N),move the cursor to the previous sentence matching the search pattern
+dN),delete from the cursor position to the previous sentence matching the search pattern
+ma,mark text using character mode (from a to z)
+mb,mark text using character mode (from a to z)
+mc,mark text using character mode (from a to z)
+md,mark text using character mode (from a to z)
+me,mark text using character mode (from a to z)
+mf,mark text using character mode (from a to z)
+mg,mark text using character mode (from a to z)
+mh,mark text using character mode (from a to z)
+mi,mark text using character mode (from a to z)
+mj,mark text using character mode (from a to z)
+mk,mark text using character mode (from a to z)
+ml,mark text using character mode (from a to z)
+mm,mark text using character mode (from a to z)
+mn,mark text using character mode (from a to z)
+mo,mark text using character mode (from a to z)
+mp,mark text using character mode (from a to z)
+mq,mark text using character mode (from a to z)
+mr,mark text using character mode (from a to z)
+ms,mark text using character mode (from a to z)
+ma,mark current position as 'a'
+mb,mark current position as 'b'
+mc,mark current position as 'c'
+md,mark current position as 'd'
+me,mark current position as 'e'
+mf,mark current position as 'f'
+mg,mark current position as 'g'
+mh,mark current position as 'h'
+mi,mark current position as 'i'
+mj,mark current position as 'j'
+mk,mark current position as 'k'
+ml,mark current position as 'l'
+mm,mark current position as 'm'
+mn,mark current position as 'n'
+mo,mark current position as 'o'
+mp,mark current position as 'p'
+mq,mark current position as 'q'
+mr,mark current position as 'r'
+ms,mark current position as 's'
+mt,mark current position as 't'
+mu,mark current position as 'u'
+mv,mark current position as 'v'
+mw,mark current position as 'w'
+mx,mark current position as 'x'
+my,mark current position as 'y'
+mz,mark current position as 'z'
+d'a,delete from current position to line marked 'a'
+d'b,delete from current position to line marked 'b'
+y'w,yank from current position to line marked 'w'
+y'x,yank from current position to line marked 'x'
+c'f,change from current position to line marked 'f'
+c'g,change from current position to line marked 'g'
+d'a,delete from current position to line marked 'a' and enter insert mode
+d'b,delete from current position to line marked 'b' and enter insert mode
+ma,set mark 'a' at current cursor position
+`a,jump to position marked 'a'
+d`a,delete text from current position to position marked 'a'
+c`a,change text from current position to position marked 'a'
+y`a,yank text from current position to position marked 'a'
+d'a,delete text from current position to beginning of line marked 'a'
+c'a,change text from current position to beginning of line marked 'a'
+y'a,yank text from current position to beginning of line marked 'a'
+d2`a,delete text from current position to position marked 'a' plus two more positions ahead
+c2`a,change text from current position to position marked 'a' plus two more positions ahead
+y2`a,yank text from current position to position marked 'a' plus two more positions ahead
+d3'a,delete text from current position to beginning of line marked 'a' plus two more lines ahead
+c3'a,change text from current position to beginning of line marked 'a' plus two more lines ahead
+y3'a,yank text from current position to beginning of line marked 'a' plus two more lines ahead
+d`a2,delete text from current position to position marked 'a' plus two more positions ahead
+c`a2,change text from current position to position marked 'a' plus two more positions ahead
+y`a2,yank text from current position to position marked 'a' plus two more positions ahead
+d'a2,delete text from current position to beginning of line marked 'a' plus two more lines ahead
+c'a2,change text from current position to beginning of line marked 'a' plus two more lines ahead
+y'a2,yank text from current position to beginning of line marked 'a' plus two more lines ahead
+ya,yank text to position marked >a>
+yw,yank current word
+yW,yank current WORD
+ye,yank to end of current word
+yE,yank to end of current WORD
+yiw,yank inner word
+yiW,yank inner WORD
+yip,yank inner paragraph
+yI,"yank inner block (e.g., parentheses, brackets, braces)"
+yF<char>,yank to previous occurrence of <char> in current line
+yT<char>,yank to just before previous occurrence of <char> in current line
+y/<pattern>,yank up to the next occurrence of <pattern>
+y?pattern,yank up to the previous occurrence of <pattern>
+yH,yank to top of screen
+yM,yank to middle of screen
+yL,yank to bottom of screen
+y3j,yank the next three lines
+`.,`: jump to last change in file
+`d.`,delete from cursor to last change
+`c.`,change from cursor to last change
+`y.`,yank from cursor to last change
+`d3.`,delete from cursor to third last change
+`c2.`,change from cursor to second last change
+`y5.`,yank from cursor to fifth last change
+`d/word/.`,delete from cursor to next occurrence of 'word' and then to last change
+`c?pattern/.`,change from cursor to previous match of 'pattern' and then to last change
+`y*.`,yank from cursor to next occurrence of word under cursor and then to last change
+`d$.`,delete from cursor to end of line and then to last change
+`c0.`,change from cursor to beginning of line and then to last change
+`yG.`,yank from cursor to end of file and then to last change
+`dgg.`,delete from cursor to beginning of file and then to last change
+`cH.`,change from cursor to top of screen and then to last change
+`yL.`,yank from cursor to bottom of screen and then to last change
+`d%/function/.`,delete from cursor to matching parenthesis and then to last change
+0,jump to position where Vim was last exited
+gg,go to the beginning of the file
+G,go to the end of the file
+yy,yank (copy) the current line
+p,paste the yanked or deleted content after the cursor
+Ctrl+r,redo the undone change
+/pattern,search for 'pattern' in the file
+n,move to the next occurrence of the search pattern
+N,move to the previous occurrence of the search pattern
+,%s/old/new/g: replace all occurrences of 'old' with 'new' in the file
+Ctrl+f,scroll forward one page
+Ctrl+b,scroll backward one page
+Ctrl+d,scroll forward half a page
+Ctrl+u,scroll backward half a page
+Ctrl-o,jump to previous jump
+Ctrl-i,jump to next jump
+Ctrl-o Ctrl-o,jump to the jump before the previous jump
+Ctrl-i Ctrl-i,jump to the jump after the next jump
+Ctrl-o 3,jump to the third previous jump
+Ctrl-i 2,jump to the second next jump
+Ctrl-o 0,jump to the first jump
+Ctrl-i 0,jump to the last jump
+Ctrl-o 5G,jump to the fifth previous jump
+Ctrl-i 5G,jump to the fifth next jump
+Ctrl-o gg,jump to the first previous jump
+Ctrl-i G,jump to the last next jump
+Ctrl-o 10j,jump to the tenth previous jump
+Ctrl-i 10k,jump to the tenth next jump
+Ctrl-o 3w,jump to the third previous word
+Ctrl-i 2b,jump to the second next word
+Ctrl-o 0e,jump to the first previous end of word
+Ctrl-i 0W,jump to the last next WORD
+Ctrl-o 3f,jump to the third previous 'f' character
+Ctrl-i 2F,jump to the second next 'F' character
+mj,set mark 'j' at current cursor position
+mk,set mark 'k' at current cursor position
+ml,set mark 'l' at current cursor position
+M,set mark 'M' at current cursor position
+N,set mark 'N' at current cursor position
+O,set mark 'O' at current cursor position
+P,set mark 'P' at current cursor position
+Q,set mark 'Q' at current cursor position
+R,set mark 'R' at current cursor position
+S,set mark 'S' at current cursor position
+T,set mark 'T' at current cursor position
+U,set mark 'U' at current cursor position
+V,set mark 'V' at current cursor position
+W,set mark 'W' at current cursor position
+X,set mark 'X' at current cursor position
+Y,set mark 'Y' at current cursor position
+Z,set mark 'Z' at current cursor position
+d'a,delete from current line to line of mark 'a'
+d'a,delete from current cursor position to position of mark 'a'
+c'a,change text from current line to line of mark 'a'
+c'a,change text from current cursor position to position of mark 'a'
+y'a,yank text to unnamed buffer from cursor to position of mark 'a'
+Ctrl-o,jump to previous location
+Ctrl-i,jump to next location
+'.',jump to last change
+`<`,jump to last visual selection
+`[`,jump to last change or yank
+``,jump to previous location
+Ctrl-o 3,jump back three locations
+Ctrl-i 2,jump forward two locations
+Ctrl-o;,jump to previous location in the same file
+Ctrl-i;,jump to next location in the same file
+"Ctrl-o, Ctrl-i",toggle between two locations
+"Ctrl-o, Ctrl-i, Ctrl-o, Ctrl-i, Ctrl-o, Ctrl-i, Ctrl-o, Ctrl-i, Ctrl-o",cycle through jump list
+d2w,delete two words
+d3j,delete three lines down
+d2f',delete to second occurrence of '
+d2t',delete to second occurrence of ' excluding the character
+d/hello,delete to first occurrence of 'hello'
+d?hello,delete to first occurrence of 'hello' backwards
+d2e,delete to end of second word
+d2E,delete to end of second WORD
+d2),delete to second closing parenthesis
+d2],delete to second closing bracket
+"Ctrl+o, Ctrl+i",move back and forth between two locations
+"g,",: move to next instance in change list
+Ctrl-o,jump to previous location in jump list
+Ctrl-i,jump to next location in jump list
+"g,",move to newer change location
+g;,move to previous change location
+"Ctrl-o, Ctrl-i",navigate back and forth through jump list
+"g;, g,",: navigate through change list
+"Ctrl-o, g,",navigate through jump and change lists
+"g;, Ctrl-i",navigate through change and jump lists
+"g;, Ctrl-o",navigate through change and jump lists
+"g;, g,",navigate through change list
+"g;, Ctrl-o, Ctrl-i",navigate through change and jump lists
+"g;, Ctrl-o, g,",navigate through change and jump lists
+g;g;,toggle between current and previous change
+g;d,delete text from current position to previous change
+g;u,undo changes up to previous change
+g;yy,yank text from current position to previous change
+g;P,paste text before cursor from previous change
+g;3w,"move cursor to previous change, then move 3 words forward"
+g;0,move cursor to beginning of line at previous change
+g;$,move cursor to end of line at previous change
+"g;f,","move cursor to previous change, then to next comma"
+g;gg,move cursor to beginning of file at previous change
+g;G,move cursor to end of file at previous change
+g;H,move cursor to top of screen at previous change
+g;M,move cursor to middle of screen at previous change
+g;L,move cursor to bottom of screen at previous change
+g;Ctrl-o,"move cursor to previous jump location, then to previous change"
+q,stop recording macro a
+@a,execute macro a
+p,paste after cursor
+3j,move down 3 lines
+0,move to beginning of line
+3w,move forward 3 words
+d3w,delete 3 words
+d3W,delete 3 WORDS
+d3e,delete 3 words to end
+d3E,delete 3 WORDS to end
+d3b,delete 3 words backward
+d3B,delete 3 WORDS backward
+d3f,delete 3 characters forward
+d3F,delete 3 characters backward
+qa,start recording macro into register 'a'
+qb,start recording macro into register 'b'
+q1,start recording macro into register '1'
+q!,start recording macro into register '!'
+"q,","start recording macro into register ','"
+q.,start recording macro into register '.'
+q/,start recording macro into register ':'
+qa10wq,record a macro to move cursor forward by 10 words
+qac$3wq,record a macro to change from cursor to the end of the line and the next two lines
+qay$3wq,record a macro to yank from cursor to the end of the line and the next two lines
+d2W,delete two WORDS
+d3k,delete three lines up
+d/word,delete to next occurrence of 'word'
+d?word,delete to previous occurrence of 'word'
+dF',delete to previous occurrence of '''
+dT',delete to just before previous occurrence of '''
+d{,delete to end of current block or function
+"d3f,",delete to third comma on the line
+"d3t,",delete to just before third comma on the line
+"d3F,",delete to third comma from the right on the line
+"d3T,",delete to just before third comma from the right on the line
+d3e,delete three words to end of sentences
+d3E,delete three words to end of WORDS
+d3),delete three sentences forward
+d3(,delete three sentences backward
+d3{,delete three paragraphs backward
+d3G,delete three lines forward from current line
+d3gg,delete three lines backward from current line
+d3H,delete three lines from top of screen
+d3L,delete three lines from bottom of screen
+d3M,delete three lines from middle of screen
+d3Ctrl-D,delete three half-screens down
+d3Ctrl-U,delete three half-screens up
+d3Ctrl-F,delete three full-screens down
+d3Ctrl-B,delete three full-screens up

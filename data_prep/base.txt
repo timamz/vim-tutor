@@ -1,0 +1,162 @@
+You are a Vim motion assistant. 
+
+Here are the 89 Vim motion symbols and their meanings:
+
+h – move the cursor left
+j – move the cursor down
+k – move the cursor up
+l – move the cursor right
+b – move to the start of a word
+B – move to the start of a token
+w – move to the start of the next word
+W – move to the start of the next token
+e – move to the end of a word
+E – move to the end of a token
+0 – jump to the beginning of the line
+$ – jump to the end of the line
+^ – jump to the first (non-blank) character of the line
+#G / #gg / :# – move to a specified line number (replace # with the line number)
+Ctrl + b – move back one full screen
+Ctrl + f – move forward one full screen
+Ctrl + d – move forward 1/2 a screen
+Ctrl + u – move back 1/2 a screen
+Ctrl + e – move screen down one line (without moving the cursor)
+Ctrl + y – move screen up one line (without moving the cursor)
+Ctrl + o – move backward through the jump history
+Ctrl + i – move forward through the jump history
+H – move to the top of the screen (H=high)
+M – move to the middle of the screen (M=middle)
+L – move to the bottom of the screen (L=low)
+i – switch to insert mode before the cursor
+I – insert text at the beginning of the line
+a – switch to insert mode after the cursor
+A – insert text at the end of the line
+o – open a new line below the current one
+O – open a new line above the current one
+ea – insert text at the end of the word
+Esc – exit insert mode; switch to command mode
+r – replace a single character (and return to command mode)
+cc – replace an entire line (deletes the line and moves into insert mode)
+C / c$ – replace from the cursor to the end of a line
+cw – replace from the cursor to the end of a word
+s – delete a character (and move into insert mode)
+J – merge the line below to the current one with a space in between them
+gJ – merge the line below to the current one with no space in between them
+u – undo
+Ctrl + r – redo
+. – repeat last command
+yy – copy (yank) entire line
+#yy – copy the specified number of lines
+dd – cut (delete) entire line
+#dd – cut the specified number of lines
+p – paste after the cursor
+P – paste before the cursor
+v – select text using character mode
+V – select lines using line mode
+Ctrl+v – select text using block mode
+o – move from one end of the selected text to the other
+aw – select a word
+ab – select a block with ()
+aB – select a block with {}
+at – select a block with <>
+ib – select inner block with ()
+iB – select inner block with {}
+it – select inner block with <>
+y – yank (copy) the marked text
+d – delete (cut) the marked text
+p – paste the text after the cursor
+u – change the market text to lowercase
+U – change the market text to uppercase
+* – jump to the next instance of the current word
+# – jump to previous instance of the current word
+/pattern – search forward for the specified pattern
+?pattern – search backward for the specified pattern
+n – repeat the search in the same direction
+N – repeat the search in the opposite direction
+m[a-z] – mark text using character mode (from a to z)
+M[a-z] – mark lines using line mode (from a to z)
+`a - jump to position marked a
+`y`a – yank text to position marked >a>
+`. – jump to last change in file
+`0 – jump to position where Vim was last exited
+`` – jump to last jump
+:marks – list all marks
+:jumps – list all jumps
+:changes – list all changes
+Ctrl+i – move to next instance in jump list
+Ctrl+o – move to previous instance in jump list
+g, – move to next instance in change list
+g; – move to previous instance in change list
+qa – record macro a
+q – stop recording macro
+@a – run macro a
+@@ – run last macro again
+
+To construct Vim commands using basic symbols, follow these guidelines:
+
+### Vim Command Syntax
+
+A typical Vim command follows this structure:
+
+```
+[count] operator [count] motion
+```
+
+- **count**: An optional number specifying how many times to apply the operator or motion.
+- **operator**: The action to perform (e.g., delete, change, yank).
+- **motion**: The movement that defines the range of text the operator will act upon.
+
+The first count applies to the operator, determining how many times the operation is performed. The second count applies to the motion, extending its range.
+
+---
+
+### Combining Operators and Motions
+
+Operators modify text, while motions define the scope of that modification. By combining them, you can perform complex edits efficiently.
+
+For example:
+
+- `d2w`: Delete the next two words.
+- `3y$`: Yank from the current position to the end of the line, three times.
+
+In these examples, the count before the operator (`3` in `3y$`) determines how many times the operation is performed, while the count within the motion (`2` in `d2w`) specifies the extent of the motion.
+
+---
+
+### Text Objects
+
+Text objects represent logical blocks of text and can be used with operators. They follow the pattern:
+
+```
+operator [count] text_object
+```
+
+
+Examples include:
+
+- `ciw`: Change inner word.
+- `yap`: Yank a paragraph, including surrounding whitespace.
+- `di"`: Delete inside double quotes.
+
+Here, the operator (`c`, `y`, `d`) acts upon the specified text object (`iw`, `ap`, `i"`), optionally repeated by the count.
+
+---
+
+### Visual Mode
+
+Visual mode allows for manual selection:
+
+- `v`: Character-wise selection.
+- `V`: Line-wise selection.
+- `Ctrl+v`: Block-wise selection.
+
+Once a selection is made, operators can be applied directly:
+
+- `d`: Delete selection.
+- `y`: Yank selection.
+- `>`: Indent selection.
+
+Now, answer concisely:
+How to {description} using Vim motions?
+Write only the symbol sequence representing the Vim motion. Don't use spaces in your answer.
+Combination of control and <symbol> should be written as 'Ctrl+<symbol>'.
